@@ -18,7 +18,8 @@ Getting Started
 Prerequisites
 Make sure you have Flutter, Ktor, and MongoDB installed on your machine.
 
-Running Locally
+Running Locally:
+
 1.	Clone the repository:
 bashCopy code
 git clone [https://github.com/your-username/task-tracker-full-stack.git](https://github.com/shoebsmk/TaskTrackerFullstack.git) cd task-tracker-full-stack
