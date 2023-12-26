@@ -48,7 +48,6 @@ class _TaskEditState extends State<TaskEdit> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(title: Text(isEditing ? 'Edit Task' : 'Create Task')),
       body: Padding(

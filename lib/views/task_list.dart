@@ -19,16 +19,10 @@ class _TaskListState extends State<TaskList> {
   List<Task> dummyTasks = [];
 
   APIResponse<List<Task>>? _apiResponseAllTask;
-  APIResponse<Task>? _apiResponseTask;
-  APIResponse<Task>? _apiResponseCreateTask;
-
-  APIResponse<String>? _apiResponse_delete_task;
 
   bool isLoding = false;
 
-  String formatDateTime(DateTime dateTime) {
-    return '${dateTime.day}/${dateTime.month}/${dateTime.year}';
-  }
+  
 
   @override
   void initState() {
@@ -47,18 +41,15 @@ class _TaskListState extends State<TaskList> {
 
     var taskData = _apiResponseAllTask?.data;
 
-    // if(_apiResponse.error){
-    //   taskData = service.getTaskListDummy();
-    // }
-
     return Scaffold(
       appBar: AppBar(
           title: const Text('Tasks',
               style: TextStyle(fontWeight: FontWeight.bold))),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.of(context).push(MaterialPageRoute(builder: (_) =>  TaskEdit( taskID: '')))
-                  .then((_) => _fetchAllTasksApi());
+          Navigator.of(context)
+          .push(MaterialPageRoute(builder: (_) =>  const TaskEdit( taskID: '')))
+          .then((_) => _fetchAllTasksApi());
         },
         child: const Icon(Icons.add),
       ),
@@ -82,16 +73,13 @@ class _TaskListState extends State<TaskList> {
           itemBuilder: (_, index) {
             return Dismissible(
               // Swipe to delete
-              key: ValueKey(taskData![index].taskID), //fix it later
+              key: ValueKey(taskData[index].taskID), //fix it later
               direction: DismissDirection.startToEnd,
               onDismissed: (direction) {},
               confirmDismiss: (direction) async {
                 final result = await showDialog(
                     context: context, builder: (_) => TaskDelete());
-                //print(result);
-                if (result == true) {
-                  _deleteTasksApi(taskData![index].taskID);
-                }
+                if (result == true) _deleteTasksApi(taskData[index].taskID);
                 return result;
               },
               background: Container(
@@ -112,8 +100,9 @@ class _TaskListState extends State<TaskList> {
                       style: TextStyle(color: theme.secondaryHeaderColor)),
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (_) =>
-                            TaskEdit(taskID: taskData[index].taskID))).then((_) => _fetchAllTasksApi());
+                        builder: (_) => 
+                        TaskEdit(taskID: taskData[index].taskID)))
+                        .then((_) => _fetchAllTasksApi());
                   },
                 ),
               ),
@@ -126,20 +115,12 @@ class _TaskListState extends State<TaskList> {
   }
 
   void _fetchAllTasksApi() async {
-    setState(() {
-      isLoding = true;
-    });
-
+    setState(() => isLoding = true );
     _apiResponseAllTask = await service.getTaskList();
-
-    setState(() {
-      isLoding = false;
-    });
+    setState(() => isLoding = false );
   }
 
-
-
   void _deleteTasksApi(String id) async {
-    _apiResponse_delete_task = await service.deleteTask(id);
+    await service.deleteTask(id);
   }
 }
