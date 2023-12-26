@@ -10,18 +10,14 @@ The user experience is enhanced through an intuitive mobile interface designed f
 Task details are conveniently presented in a scrollable list, providing users with a clear overview. 
 Additionally, a dedicated screen is implemented to streamline the task-editing process, contributing to a user-friendly and efficient project workflow.
 
-Tech Stack
-•	Frontend:
-o	Flutter (Dart)
-•	Backend:
-o	Ktor (Kotlin)
-o	MongoDB
+
 
 
 Getting Started
 
 Prerequisites
-•	Make sure you have Flutter, Ktor, and MongoDB installed on your machine.
+Make sure you have Flutter, Ktor, and MongoDB installed on your machine.
+
 Running Locally
 1.	Clone the repository:
 bashCopy code
