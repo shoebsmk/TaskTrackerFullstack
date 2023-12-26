@@ -80,3 +80,5 @@ Notes
 •	This project was developed as part of a hiring round.
 
 
+![Task Tracker App](screenshots/Main_Tasks_View.png)
+
