@@ -37,38 +37,38 @@ bashCopy code
 cd frontend flutter run
 
 7.	Open the App:
-o	Open the Task Tracker app on your emulator or physical device.
+Open the Task Tracker app on your emulator or physical device.
 API Endpoints
 
 •	GET All Tasks:
-o	API URL: http://0.0.0.0:8080/get-all-tasks
+API URL: http://0.0.0.0:8080/get-all-tasks
 
 o	Method: GET
-o	Description: Retrieve a list of all tasks.
+Description: Retrieve a list of all tasks.
 
 •	Create Task:
-o	API URL: http://0.0.0.0:8080/create-update-task
+API URL: http://0.0.0.0:8080/create-update-task
 
 o	Method: POST
-o	Description: Create a new task. (Request Body: JSON with task details)
+Description: Create a new task. (Request Body: JSON with task details)
 
 •	Get Task by ID:
-o	API URL: http://0.0.0.0:8080/get-task
+API URL: http://0.0.0.0:8080/get-task
 
 o	Method: GET
-o	Description: Retrieve details of a specific task by its ID.
+Description: Retrieve details of a specific task by its ID.
 
 •	Update Task:
-o	API URL: http://0.0.0.0:8080/create-update-task
+API URL: http://0.0.0.0:8080/create-update-task
 
 o	Method: PUT
-o	Description: Update an existing task by providing updated task details in the request body. (Request Body: JSON with updated task details)
+Description: Update an existing task by providing updated task details in the request body. (Request Body: JSON with updated task details)
 
 •	Delete Task:
-o	API URL: http://0.0.0.0:8080/delete-task
+API URL: http://0.0.0.0:8080/delete-task
 
 o	Method: DELETE
-o	Description: Delete a task by its ID.
+Description: Delete a task by its ID.
 
 Architecture Overview
 The application follows a client-server architecture. The Flutter frontend communicates with the Ktor backend through RESTful API endpoints. MongoDB is used to persistently store task data.
