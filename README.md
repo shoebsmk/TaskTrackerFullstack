@@ -74,6 +74,7 @@ Architecture Overview
 The application follows a client-server architecture. The Flutter frontend communicates with the Ktor backend through RESTful API endpoints. MongoDB is used to persistently store task data.
 
 Additional Information
+
 •	The project structure is organized into separate folders for the frontend and backend.
 
 •	Frontend code is located in the frontend repo, and backend code is in the backend repo.
