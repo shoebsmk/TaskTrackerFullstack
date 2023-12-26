@@ -75,8 +75,10 @@ The application follows a client-server architecture. The Flutter frontend commu
 
 Additional Information
 •	The project structure is organized into separate folders for the frontend and backend.
+
 •	Frontend code is located in the frontend repo, and backend code is in the backend repo.
 Notes
+
 •	This project was developed as part of a hiring round.
 
 
