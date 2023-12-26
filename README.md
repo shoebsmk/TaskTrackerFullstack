@@ -71,6 +71,7 @@ o	Method: DELETE
 Description: Delete a task by its ID.
 
 Architecture Overview
+
 The application follows a client-server architecture. The Flutter frontend communicates with the Ktor backend through RESTful API endpoints. MongoDB is used to persistently store task data.
 
 Additional Information
