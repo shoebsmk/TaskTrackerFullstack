@@ -1,16 +1,73 @@
 # flutter_application_proto_ii
 
-A new Flutter project.
+Task Tracker Full Stack
 
-## Getting Started
+Task Tracker Full Stack is a simple full-stack application that allows users to manage tasks. The application is built with Flutter (Dart) for the frontend and Ktor (Kotlin) for the backend. MongoDB is used as the database to store task data.
 
-This project is a starting point for a Flutter application.
+Features:
+The project features a comprehensive set of task management functionalities, allowing users to effortlessly create, view, update, and delete tasks. 
+The user experience is enhanced through an intuitive mobile interface designed for efficient task management. 
+Task details are conveniently presented in a scrollable list, providing users with a clear overview. 
+Additionally, a dedicated screen is implemented to streamline the task-editing process, contributing to a user-friendly and efficient project workflow.
 
-A few resources to get you started if this is your first Flutter project:
+Tech Stack
+•	Frontend:
+o	Flutter (Dart)
+•	Backend:
+o	Ktor (Kotlin)
+o	MongoDB
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Getting Started
+
+Prerequisites
+•	Make sure you have Flutter, Ktor, and MongoDB installed on your machine.
+Running Locally
+1.	Clone the repository:
+bashCopy code
+git clone [https://github.com/your-username/task-tracker-full-stack.git](https://github.com/shoebsmk/TaskTrackerFullstack.git) cd task-tracker-full-stack
+
+3.	Run Backend (Ktor):
+git clone https://github.com/shoebsmk/com.example.ktor-bknd.git
+bashCopy code
+cd backend ./gradlew run
+
+5.	Run Frontend (Flutter):
+bashCopy code
+cd frontend flutter run
+
+7.	Open the App:
+o	Open the Task Tracker app on your emulator or physical device.
+API Endpoints
+
+•	GET All Tasks:
+o	API URL: http://0.0.0.0:8080/get-all-tasks
+o	Method: GET
+o	Description: Retrieve a list of all tasks.
+•	Create Task:
+o	API URL: http://0.0.0.0:8080/create-update-task
+o	Method: POST
+o	Description: Create a new task. (Request Body: JSON with task details)
+•	Get Task by ID:
+o	API URL: http://0.0.0.0:8080/get-task
+o	Method: GET
+o	Description: Retrieve details of a specific task by its ID.
+•	Update Task:
+o	API URL: http://0.0.0.0:8080/create-update-task
+o	Method: PUT
+o	Description: Update an existing task by providing updated task details in the request body. (Request Body: JSON with updated task details)
+•	Delete Task:
+o	API URL: http://0.0.0.0:8080/delete-task
+o	Method: DELETE
+o	Description: Delete a task by its ID.
+
+Architecture Overview
+The application follows a client-server architecture. The Flutter frontend communicates with the Ktor backend through RESTful API endpoints. MongoDB is used to persistently store task data.
+
+Additional Information
+•	The project structure is organized into separate folders for the frontend and backend.
+•	Frontend code is located in the frontend repo, and backend code is in the backend repo.
+Notes
+•	This project was developed as part of a hiring round.
+
+
