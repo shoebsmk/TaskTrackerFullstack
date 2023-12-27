@@ -1,6 +1,5 @@
-# flutter_application_proto_ii
+# Task Tracker
 
-Task Tracker Full Stack
 
 Task Tracker Full Stack is a simple full-stack application that allows users to manage tasks. The application is built with Flutter (Dart) for the frontend and Ktor (Kotlin) for the backend. MongoDB is used as the database to store task data.
 
